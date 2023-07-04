@@ -41,5 +41,6 @@ After the pull request is merged, all team members should pull the latest code f
 
 By following this process, all the teammates can work simultaneously on different features while ensuring you are all working with the most updated code and that your changes don't conflict with each other.
 
-
+## How to resolve merge conflicts:
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
 
