@@ -17,10 +17,14 @@ As you make changes for your feature, you should regularly commit those changes 
 ## Step 3. Pull the latest code from main and merge into the feature branch:
 Before pushing your feature branch to GitHub, it can be helpful to pull the latest code from main and merge it into your feature branch. This can help catch and resolve any merge conflicts before the changes are pushed to GitHub. If there are conflicts, you need to resolve those conflicts.
 
+Method 1:
 ### git checkout main
 ### git pull origin main
 ### git checkout your-feature-branch
 ### git merge main
+Method 2:
+### git checkout your-feature-branch
+### git pull origin main
 
 ## Step 4. Push the feature branch to GitHub:
 git push origin your-feature-branch
