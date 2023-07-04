@@ -6,7 +6,7 @@ Before starting work on a new feature, each team member should update their loca
 
 ### git checkout main
 ### git pull origin main
-### git checkout -b local-machine1-feature
+### git checkout -b your-feature-branch
 
 ## Step 2. Work on the feature and commit changes:
 As you make changes for your feature, you should regularly commit those changes to your feature branch. Regular commits help track progress and make it easier to identify and fix issues.
