@@ -2,7 +2,7 @@
 This is a recommended git workflow for project 1. 
 
 ## Step 1. Pull the latest code from the main branch:
-Before starting work on a new feature, each team member should update their local main branch to match the main branch in the remote GitHub repository. They can then create a new branch off of main for their feature. This helps ensure that everyone is starting from the most recent code.
+Before starting work on a new feature, each team member should update their local main branch to match the main branch in the remote GitHub repository. You can then create a new branch off of main for your feature. This helps ensure that everyone is starting from the most recent code.
 
 ### git checkout main
 ### git pull origin main
