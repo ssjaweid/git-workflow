@@ -44,4 +44,5 @@ By following this process, all the teammates can work simultaneously on differen
 ## How to resolve merge conflicts:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
 
-## To reduce conflicts. You should create .gitignore file and add ".ipynb_checkpoints" directory to the ".gitignore" file
+## How to reduce conflicts. 
+You should create .gitignore file and add ".ipynb_checkpoints" directory to the ".gitignore" file
