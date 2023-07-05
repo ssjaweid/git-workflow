@@ -46,3 +46,17 @@ https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addres
 
 ## How to reduce conflicts. 
 You should create .gitignore file and add ".ipynb_checkpoints" directory to the ".gitignore" file
+
+## How to remove ".ipynb_checkpoints" from your main branch on github.
+### Step 1. 
+### git rm -r --cached .ipynb_checkpoints
+This command removes the .ipynb_checkpoints directory from the Git repository (the --cached option ensures the actual files remain on your disk). If your checkpoint files are in another directory, you may need to adjust the path accordingly.
+### Step 2. 
+### git commit -m "Remove .ipynb_checkpoints"
+### git push origin main
+This will commit the changes and push them to the main branch on your remote repository.
+### Step 3. Update .gitignore: Lastly, to prevent these files from being added to the repository in the future, you should add .ipynb_checkpoints to your .gitignore file. 
+### Step 4. commit and push the .gitignore file to your repository
+### git add .gitignore
+### git commit -m "Add .gitignore"
+### git push origin main
