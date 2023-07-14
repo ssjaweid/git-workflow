@@ -62,3 +62,6 @@ This will commit the changes and push them to the main branch on your remote rep
 ### git add .gitignore
 ### git commit -m "Add .gitignore"
 ### git push origin main
+
+## If git hangs when pushing to github try to increase the buffer:
+### git config --global http.postBuffer 524288000
