@@ -93,5 +93,12 @@ git checkout --ours path/to/conflicted_file.ext
 After choosing a version, you should mark the conflict as resolved by adding the file to the index:
 git add path/to/conflicted_file.ext
 
+5. If you want to discard your local commits and make your local branch exactly match the remote branch, follow these steps:
+   1) Fetch the Latest Remote Changes: git fetch origin
+   2) Reset Your Local Branch: git reset --hard origin/main (Use the reset command with the --hard flag to set your current branch's HEAD to the specified commit (in this case, the latest    commit of the remote branch).
+   3) Clean Up Untracked Files (Optional):git clean -fd
+      -f: Stands for "force", which is required when using git clean.
+      -d: Removes untracked directories in addition to untracked files.
+   4) After performing these steps, your local branch will match the state of the remote branch, and all local commits that were divergent will be discarded. Remember to be careful with       these commands, especially reset --hard, as it discards commits and there's no simple undo. Always make sure you're okay with losing changes before using it.
 
 
