@@ -86,12 +86,12 @@ Rebase: This takes your local changes and "replays" them on top of the remote ch
 
 4. Handling Divergent Branches:
 If you've identified a specific file that's causing the divergence and you're in the middle of a merge (or rebase) conflict, you can use git checkout with the --theirs or --ours options to choose a specific version of that file.
-1) If you decide the remote version of the file is the correct one and you want to discard your local changes for that particular file:
-git checkout --theirs path/to/conflicted_file.ext
-2) If you believe your local changes are the correct ones and want to discard the changes from the remote for that file:
-git checkout --ours path/to/conflicted_file.ext
-After choosing a version, you should mark the conflict as resolved by adding the file to the index:
-git add path/to/conflicted_file.ext
+   1) If you decide the remote version of the file is the correct one and you want to discard your local changes for that particular file:
+   git checkout --theirs path/to/conflicted_file.ext
+   2) If you believe your local changes are the correct ones and want to discard the changes from the remote for that file:
+   git checkout --ours path/to/conflicted_file.ext
+   After choosing a version, you should mark the conflict as resolved by adding the file to the index:
+   git add path/to/conflicted_file.ext
 
 5. If you want to discard your local commits and make your local branch exactly match the remote branch, follow these steps:
    1) Fetch the Latest Remote Changes: git fetch origin
