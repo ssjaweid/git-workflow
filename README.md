@@ -65,3 +65,33 @@ This will commit the changes and push them to the main branch on your remote rep
 
 ## If git hangs when pushing to github try to increase the buffer:
 ### git config --global http.postBuffer 524288000
+
+## Understanding conflicts and how to handle them
+Here are 3 situitions:  
+1. Local Ahead of Remote:
+If you have more commits locally than on the remote, then you are "ahead" of the remote.
+In this case, a simple git push will update the remote branch to match your local branch.
+
+2. Remote Ahead of Local:
+If the remote has more commits than your local branch, then you are "behind" the remote.
+Here, a git pull (which is essentially a git fetch followed by a git merge) will fetch the new commits from the remote and merge them into your local branch, bringing you up-to-date.
+
+3. Divergent Branches:
+This is where both the local and remote branches have new commits that the other doesn't have. The branches have "diverged."
+A simple git push won't work here because the histories are different and Git doesn't want to risk losing any commits.
+When you do a git pull, Git will try to merge the remote changes into your local branch. This might lead to merge conflicts if the same parts of the code were changed in both your local commits and the new remote commits.
+You'll need to decide how to reconcile the differences, typically through either a merge or a rebase:
+Merge: This will create a new merge commit in your local branch that has two parents: the last local commit and the last remote commit. It's a way to tie the two histories together.
+Rebase: This takes your local changes and "replays" them on top of the remote changes, making it look as if you made your changes after the latest remote changes. This can provide a cleaner, linear commit history but might be a bit more complex to handle, especially if there are many conflicts.
+
+4. Handling Divergent Branches:
+If you've identified a specific file that's causing the divergence and you're in the middle of a merge (or rebase) conflict, you can use git checkout with the --theirs or --ours options to choose a specific version of that file.
+1) If you decide the remote version of the file is the correct one and you want to discard your local changes for that particular file:
+git checkout --theirs path/to/conflicted_file.ext
+2) If you believe your local changes are the correct ones and want to discard the changes from the remote for that file:
+git checkout --ours path/to/conflicted_file.ext
+After choosing a version, you should mark the conflict as resolved by adding the file to the index:
+git add path/to/conflicted_file.ext
+
+
+
