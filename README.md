@@ -1,5 +1,9 @@
 # git-workflow
-This is a recommended git workflow for project 1. 
+This is a recommended git workflow for projects
+the best pratices are:
+1. add a .gitignore file when create the project on github
+2. communicate with your team
+3. divide work into files, classes, functions to reduce conflicts.
 
 ## Step 1. Pull the latest code from the main branch:
 Before starting work on a new feature, each team member should update their local main branch to match the main branch in the remote GitHub repository. You can then create a new branch off of main for your feature. This helps ensure that everyone is starting from the most recent code.
